@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows 11 Login Screen</title>
+  <style>
+:root {
+  --wallpaper: url("userbg.jpg");
+  --light-grey: #e8e5e9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+  transition-duration: 0.3s;
+}
+
+body {
+  background: var(--wallpaper) center no-repeat;
+  background-size: 100vw;
+  height: 100vh;
+  transition: opacity 0.5s ease-in-out;
+}
+
+    body.fade-out {
+      opacity: 0;
+    }
+
+section {
+  backdrop-filter: blur(1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  background: var(--light-grey);
+  border-radius: 200px;
+  font-size: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar svg {
+  width: 1em;
+  fill: #777;
+  margin-top: -0.05em;
+}
+
+.username {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.password {
+  position: relative;
+  color: var(--light-grey);
+}
+
+.password input {
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 0.3rem;
+  width: 20rem;
+  margin-top: 1rem;
+  border: 0.13rem solid rgba(200, 200, 200, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.password input:focus {
+  border-bottom-color: currentcolor;
+}
+
+.password input::placeholder {
+  color: currentcolor;
+}
+
+.password svg {
+  width: 1.5em;
+  fill: currentcolor;
+  position: absolute;
+  right: 0.5rem;
+  top: 42%;
+}
+
+.btn {
+  min-height: 2.5rem;
+  min-width: 2.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  color: var(--light-grey);
+}
+
+.bottom-right svg {
+  width: 1.5em;
+  fill: currentcolor;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.bottom-left .user .avatar {
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+}
+
+.bottom-left .user {
+  display: flex;
+  padding: 0.3rem 0.5rem;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: bold;
+  color: var(--light-grey);
+}
+
+  </style>
+</head>
+<body>
+<section>
+  <form>
+    <div class="avatar">
+
+    </div>
+    <p class="username">M Sharafat</p>
+    <div class="password">
+      <input type="password" placeholder="Password" autofocus />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+        ></path>
+      </svg>
+    </div>
+  </form>
+
+  <div class="bottom-left">
+    <div class="user btn">
+      <div class="avatar">
+        <svg
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M512 625.778c-159.289 0-284.444-125.156-284.444-284.445S352.71 56.89 512 56.89s284.444 125.155 284.444 284.444S671.29 625.778 512 625.778z m0-56.89c125.156 0 227.556-102.4 227.556-227.555S637.156 113.778 512 113.778s-227.556 102.4-227.556 227.555S386.844 568.89 512 568.89z"
+          />
+          <path
+            d="M56.889 1024c0-250.311 204.8-455.111 455.111-455.111S967.111 773.689 967.111 1024h-56.889c0-221.867-176.355-398.222-398.222-398.222S113.778 802.133 113.778 1024h-56.89z"
+          />
+        </svg>
+      </div>
+      <p>Ahmad</p>
+    </div>
+
+    <div class="user btn">
+      <div class="avatar">
+        <svg
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M512 625.778c-159.289 0-284.444-125.156-284.444-284.445S352.71 56.89 512 56.89s284.444 125.155 284.444 284.444S671.29 625.778 512 625.778z m0-56.89c125.156 0 227.556-102.4 227.556-227.555S637.156 113.778 512 113.778s-227.556 102.4-227.556 227.555S386.844 568.89 512 568.89z"
+          />
+          <path
+            d="M56.889 1024c0-250.311 204.8-455.111 455.111-455.111S967.111 773.689 967.111 1024h-56.889c0-221.867-176.355-398.222-398.222-398.222S113.778 802.133 113.778 1024h-56.89z"
+          />
+        </svg>
+      </div>
+      <p>Touseef</p>
+    </div>
+  </div>
+
+  <div class="bottom-right">
+    <div class="btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M0.689453 6.99659C3.78027 4.49704 7.71526 3 11.9999 3C16.2845 3 20.2195 4.49704 23.3104 6.99659L22.0536 8.55252C19.3062 6.3307 15.8085 5 11.9999 5C8.19133 5 4.69356 6.3307 1.94617 8.55252L0.689453 6.99659ZM3.83124 10.8864C6.0635 9.08119 8.90544 8 11.9999 8C15.0944 8 17.9363 9.08119 20.1686 10.8864L18.9118 12.4424C17.023 10.9149 14.6183 10 11.9999 10C9.38151 10 6.97679 10.9149 5.08796 12.4424L3.83124 10.8864ZM6.97304 14.7763C8.34673 13.6653 10.0956 13 11.9999 13C13.9042 13 15.6531 13.6653 17.0268 14.7763L15.7701 16.3322C14.7398 15.499 13.4281 15 11.9999 15C10.5717 15 9.26002 15.499 8.22975 16.3322L6.97304 14.7763ZM10.1148 18.6661C10.63 18.2495 11.2858 18 11.9999 18C12.714 18 13.3698 18.2495 13.885 18.6661L11.9999 21L10.1148 18.6661Z"
+        ></path>
+      </svg>
+    </div>
+    <div class="btn">
+      <svg
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="#000000"
+      >
+        <g stroke-width="0"></g>
+        <g stroke-linecap="round" stroke-linejoin="round"></g>
+        <g>
+          <circle
+            fill="none"
+            stroke="currentcolor"
+            stroke-linejoin="round"
+            stroke-width="32"
+            cx="256"
+            cy="56"
+            r="40"
+          ></circle>
+          <path
+            fill="none"
+            stroke="currentcolor"
+            stroke-linejoin="round"
+            stroke-width="32"
+            d="M204.23,274.44c2.9-18.06,4.2-35.52-.5-47.59-4-10.38-12.7-16.19-23.2-20.15L88,176.76c-12-4-23.21-10.7-24-23.94-1-17,14-28,29-24,0,0,88,31.14,163,31.14s162-31,162-31c18-5,30,9,30,23.79,0,14.21-11,19.21-24,23.94l-88,31.91c-8,3-21,9-26,18.18-6,10.75-5,29.53-2.1,47.59l5.9,29.63L351.21,467.9c2.8,13.15-6.3,25.44-19.4,27.74S308,489,304.12,476.28L266.56,360.35q-2.71-8.34-4.8-16.87L256,320l-5.3,21.65q-2.52,10.35-5.8,20.48L208,476.18c-4,12.85-14.5,21.75-27.6,19.46S158,480.05,160.94,467.9l37.39-163.83Z"
+          ></path>
+        </g>
+      </svg>
+    </div>
+    <div class="btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M6.26489 3.80698L7.41191 5.44558C5.34875 6.89247 4 9.28873 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 9.28873 18.6512 6.89247 16.5881 5.44558L17.7351 3.80698C20.3141 5.61559 22 8.61091 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 8.61091 3.68594 5.61559 6.26489 3.80698ZM11 12V2H13V12H11Z"
+        ></path>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+  <script>
+    document.querySelector("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.querySelector("section").style.transform = "translateY(-100%)";
+    });
+
+         document.addEventListener('keydown', (event) => {
+       if (event.key === 'Enter') {
+         document.body.classList.add('fade-out');
+         setTimeout(() => {
+           window.location.href = 'index.html';
+         }, 500);
+       }
+     });
+  </script>
+</body>
+</html>
